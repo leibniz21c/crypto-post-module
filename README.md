@@ -1,2 +1,3 @@
 # crypto-post-module
-I'll use.
+
+Python encoder and Javascript decoder with AES-CBC(it can process unicode).
