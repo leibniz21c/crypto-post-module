@@ -43,5 +43,14 @@ async function decrypt(url, key) {
 
     // Can be Utf8 too
     output_plaintext = CryptoJS.enc.Latin1.stringify(plaintextArray);
-    return decodeURIComponent(output_plaintext);
+    
+    try {
+        decoded_text = decodeURIComponent(output_plaintext);    
+    } catch (error) {
+        console.log("Wrong password");
+        alert("Wrong password!");
+        document.write("");
+        return;
+    }
+    document.write(decoded_text);
 }
